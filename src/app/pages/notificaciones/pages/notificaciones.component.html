@@ -1,0 +1,11 @@
+<div class="container">
+  <mat-form-field class="example-full-width">
+    <input matInput [(ngModel)]="title" placeholder="Título de la notificación" [disabled]="true" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput [(ngModel)]="message" placeholder="Mensaje de la notificación" rows="4"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="enviarNotificacion()">Enviar Notificación</button>
+</div>

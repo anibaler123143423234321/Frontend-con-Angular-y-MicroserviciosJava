@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+  padding: 20px;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.mat-input-element, .mat-input-element.mat-form-field-autofill-control {
+  width: 100%; /* Ajusta el ancho del input según tus necesidades */
+}
+
+textarea.mat-input-element {
+  font-size: 16px; /* Ajusta el tamaño del mensaje según tus necesidades */
+  resize: vertical; /* Permite redimensionar verticalmente el área de texto */
+}

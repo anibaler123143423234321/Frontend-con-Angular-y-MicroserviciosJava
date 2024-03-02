@@ -1,0 +1,39 @@
+@import 'styles/colors';
+
+mat-card {
+  width: 450px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+mat-form-field {
+  width: 400px;
+}
+
+.personal {
+  &__photo{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.photo{
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  padding-bottom: 20px;
+  flex-direction: column;
+  border-radius: 0%;
+  width: 150px;
+  height: 150px;
+  &__img {
+    margin-bottom: 16px;
+  }
+}
+
+.password-toggle {
+  position: absolute;
+  top: 22px; /* Ajusta la posición vertical según tu diseño */
+  right: 12px; /* Ajusta la posición horizontal según tu diseño */
+  cursor: pointer; /* Cambia el cursor a una mano cuando el usuario pasa el ratón sobre el ícono */
+}

@@ -1,0 +1,27 @@
+<section class="container" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="10px">
+  <mat-card class="card" fxFlex="50%"> <!-- Ajusta el valor de fxFlex según tus necesidades -->
+    <!-- Formulario para enviar correo para recuperar contraseña -->
+    <form #f="ngForm" (ngSubmit)="enviarCorreo(f)" class="form">
+      <mat-form-field class="full-width">
+        <mat-label>Ingrese su dirección de correo electrónico para recuperar contraseña</mat-label>
+        <input type="email" matInput placeholder="Correo electrónico" name="email" ngModel required>
+        <mat-error>Por favor, ingrese una dirección de correo electrónico válida.</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Recuperar Contraseña</button>
+    </form>
+
+    <div style="margin-top: 200px;"></div> <!-- Agregar espacio vertical -->
+
+    <!-- Botón para enviar solicitud de eliminación de cuenta -->
+    <form #deleteForm="ngForm" (ngSubmit)="eliminarCuenta(deleteForm)" class="form">
+      <mat-form-field class="full-width">
+        <mat-label>Ingrese su dirección de correo electrónico para eliminar la cuenta</mat-label>
+        <input type="email" matInput placeholder="Correo electrónico" name="email" ngModel required>
+        <mat-error>Por favor, ingrese una dirección de correo electrónico válida.</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="warn" type="submit">Eliminar Cuenta</button>
+    </form>
+  </mat-card>
+</section>

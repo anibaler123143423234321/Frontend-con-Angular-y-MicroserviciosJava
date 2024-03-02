@@ -1,0 +1,10 @@
+/* video-room.component.css */
+.black-screen {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  color: white; /* Cambia el color del texto si lo deseas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
