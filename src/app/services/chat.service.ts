@@ -17,7 +17,7 @@
     }
 
     initConnectionSocket() {
-      const url = 'https://dotval-app-6908ca550bb8.herokuapp.com/chat-socket';
+      const url = 'http://localhost:5555/chat-socket';
       const socket = new SockJS(url);
       this.stompClient = Stomp.over(socket);
     }

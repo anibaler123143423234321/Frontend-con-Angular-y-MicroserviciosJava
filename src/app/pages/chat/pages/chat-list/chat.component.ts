@@ -12,6 +12,8 @@ export class ChatComponent implements OnInit {
 
   messageInput: string = '';
   userId: string = '';
+  userName: string = ''; // Nuevo campo para almacenar el nombre del usuario
+  userLastName: string = ''; // Nuevo campo para almacenar el apellido del usuario
   messageList: any[] = [];
   userList: string[] = [];
 
@@ -27,7 +29,10 @@ export class ChatComponent implements OnInit {
   sendMessage() {
     const chatMessage = {
       message: this.messageInput,
-      user: this.userId
+      userId: this.userId,
+      nombre: this.userName,
+      apellido: this.userLastName,
+      message_side: 'sender' // Establecer el lado del mensaje como 'sender'
     } as ChatMessage;
     this.chatService.sendMessage("ABC", chatMessage);
     this.messageInput = '';
@@ -37,10 +42,11 @@ export class ChatComponent implements OnInit {
     this.chatService.getMessageSubject().subscribe((messages: any) => {
       this.messageList = messages.map((item: any) => ({
         ...item,
-        message_side: item.user === this.userId ? 'sender' : 'receiver'
+        message_side: item.userId === this.userId ? 'sender' : 'receiver' // Actualizar message_side en función de userId
       }));
     });
   }
+
 
   lisenerUserList() {
     this.chatService.getUserListSubject().subscribe((users: string[]) => {
@@ -48,4 +54,18 @@ export class ChatComponent implements OnInit {
       console.log("User list in component: ", this.userList);
     });
   }
+
+  getInitials(firstName: string, lastName: string): string {
+    const firstInitial = firstName.charAt(0).toUpperCase();
+    const lastInitial = lastName.charAt(0).toUpperCase();
+    return firstInitial + lastInitial;
+  }
+
+  getCurrentTime(): string {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+  }
+
 }

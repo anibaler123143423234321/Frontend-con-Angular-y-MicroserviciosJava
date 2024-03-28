@@ -16,6 +16,6 @@ export const environment = {
       measurementId: "G-Z3BPHDP2NK"
     }
   },
-  url:'https://dotval-app-6908ca550bb8.herokuapp.com/'
+  url:'http://localhost:5555/'
 };
 

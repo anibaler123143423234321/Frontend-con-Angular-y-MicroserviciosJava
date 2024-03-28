@@ -225,3 +225,39 @@ body {
 .message_template {
   display: none;
 }
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: relative; /* Añadimos posicionamiento relativo */
+  float: left;
+  margin-right: 15px;
+  margin-top: 10px; /* Ajustamos el margen superior */
+}
+
+.message.right .avatar {
+  float: right;
+  margin-right: 0;
+  margin-left: 15px;
+  margin-top: 10px; /* Ajustamos el margen superior */
+}
+
+.initials {
+  font-size: 16px;
+  color: #fff;
+  position: absolute; /* Añadimos posicionamiento absoluto */
+  top: 50%; /* Lo colocamos en el centro verticalmente */
+  left: 50%; /* Lo colocamos en el centro horizontalmente */
+  transform: translate(-50%, -50%); /* Ajustamos el centro del texto */
+  text-transform: uppercase;
+}
+
+.sent_info {
+  font-size: smaller; /* Tamaño de letra más pequeño */
+  font-family: 'Arial', sans-serif; /* Estilo de letra bonito */
+  color: #666; /* Color de letra personalizado */
+  margin-top: 5px; /* Espacio superior */
+}
+
